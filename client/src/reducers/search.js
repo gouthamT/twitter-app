@@ -22,11 +22,16 @@ const search = (state = { ...DefaultState }, action) => {
     return { ...DefaultState };
     
   case SET_FAVORITE_TWEET: {
-    if (action.id && state.tweets && state.tweets) {
-      let actionedTweetIdx = state.tweets.findIndex(t => t.id === action.id);
-      if (actionedTweetIdx > -1) { state.tweets[actionedTweetIdx].favorited = !state.tweets[actionedTweetIdx].favorited; }
+    let tweets;
+    if (action.id && state.user && state.user.tweets) {
+      tweets = state.user.tweets.map(tweet => {
+        if(tweet && tweet.id === action.id) {
+          tweet.favorited = !tweet.favorited;
+        }
+        return tweet;
+      })
     }
-    return {...state};
+    return {...state, user: {...state.user, tweets}};
   }
 
   default:

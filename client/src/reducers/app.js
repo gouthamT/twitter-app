@@ -26,11 +26,16 @@ const app = (state = { ...DefaultState }, action) => {
     return { ...state, isLoading: false };
 
   case SET_FAVORITE_TWEET: {
+    let tweets;
     if (action.id && state.user && state.user.tweets) {
-      let actionedTweetIdx = state.user.tweets.findIndex(t => t.id === action.id);
-      if (actionedTweetIdx > -1) { state.user.tweets[actionedTweetIdx].favorited = !state.user.tweets[actionedTweetIdx].favorited; }
+      tweets = state.user.tweets.map(tweet => {
+        if(tweet && tweet.id === action.id) {
+          tweet.favorited = !tweet.favorited;
+        }
+        return tweet;
+      })
     }
-    return {...state};
+    return {...state, user: {...state.user, tweets}};
   }
 
   default: 

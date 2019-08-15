@@ -44,6 +44,7 @@
     background-color: $white;
     width: 80%;
     padding: 0;
+    min-width: 20rem;
     .tweet__list-item {
       list-style-type: none;
       align-self: flex-start;
