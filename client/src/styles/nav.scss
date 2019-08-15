@@ -1,0 +1,22 @@
+.app {
+    .app__nav {
+    @include flex-center();
+    font-size: 13px;
+    font-weight: bold;
+    height: 46px;
+    line-height: 1;
+    padding: 0 .2rem 0 .2rem;
+    background: $white;
+
+    .app__nav--item {
+      padding: 0.7rem;
+      text-decoration: none;
+      color: $primary-color !important;
+    }
+
+    .app__nav--item--active {
+      border-bottom: 2px solid $primary-color;
+      text-decoration: none;
+    }
+  }
+}

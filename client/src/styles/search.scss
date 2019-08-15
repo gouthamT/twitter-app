@@ -1,0 +1,127 @@
+.form__search {
+  @include flex-center();
+  margin: 1rem;
+  .search-box__input {
+    width: 20rem;
+  }
+
+  .search-box__input:focus {
+    @include focus();
+  }
+
+  .search-box__btn-search:focus {
+    @include focus();
+  }
+
+  .search-box__btn-search[data-disabled="false"]:hover {
+    color: $primary-color;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  .search-box__btn-search {
+    margin-left: 0.2rem;
+  }
+
+  .search-box__btn-search[data-disabled="true"] {
+    opacity: 0.3 !important;
+  }
+}
+
+.tweets__section {
+  margin-top: 1rem;
+  .search__not-found {
+    @include flex-center();
+    background-color: $white;
+    margin-left: 7rem;
+    width: 80%;
+    padding: .5rem;
+  }
+  .tweets__unorderd-list {
+    @include flex-center();
+    flex-flow: column wrap;
+    margin-left: 7rem;
+    background-color: $white;
+    width: 80%;
+    padding: 0;
+    .tweet__list-item {
+      list-style-type: none;
+      align-self: flex-start;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
+      margin-bottom: 2rem;
+      box-sizing: border-box;
+      width: 100%;
+      .tweet-message {
+        background-color: $white;
+        border: 1px solid $white;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: flex-start;
+        padding: .5rem;
+        position: relative;
+
+        .tweet-message__head {
+          overflow: hidden;
+          .tweet-message_user--background {
+            width: 100%;
+            height: 7rem;
+          }
+          .tweet-message_user--avatar[data-bg="true"] {
+            transform: translate(10%, -50%);
+          }
+          .tweet-message_user--avatar[data-bg="false"] {
+            transform: translate(10%);
+          }
+        }
+        .tweet-message__display {
+          .tweet-message__display--author {
+            color: $secondary-color;
+          }
+          .tweet-message__display--timeStamp {
+            font-size: 0.7rem;
+            color: $light-secondary-color;
+          }
+        }
+        .tweet-message__display-label {
+          color: $secondary-color;
+          font-weight: normal;
+          word-wrap: break-word;
+          overflow: hidden;
+          font-size: 1rem;
+          line-height: 1.375em;
+          margin-top: .1rem;
+        }
+        .tweet-favorite {
+          margin: .1rem;
+          align-self: flex-end;
+          position: absolute;
+          right: 2rem;
+          bottom: .5rem;
+          width: 2rem;
+          height: 2rem;
+          svg {
+            cursor: pointer;
+            &:hover {
+              fill: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*
+* Media Queries
+*/
+
+@media screen and (max-width: $media-brk-pt) {
+  .tweets__section {
+    .search__not-found {
+      margin-left: 2rem;
+    }
+  }
+}

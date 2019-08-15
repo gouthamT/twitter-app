@@ -1,0 +1,126 @@
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+  .user-profile__section {
+    position: relative;
+    margin-left: 2.5rem;
+    flex: 1;
+
+    .user-profile___header {
+      overflow: hidden;
+      padding: 0;
+
+      .user-profile__user--background {
+        width: 100%;
+        height: 7rem;
+      }
+      .user-profile__user--avatar[data-bg="true"] {
+        transform: translate(10%, -50%);
+      }
+      .user-profile__user--avatar[data-bg="false"] {
+        transform: translate(10%);
+      }
+    }
+    .user-profile___display {
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      transform: translate(15%, 15%);
+      .user-profile___display--author {
+        color: $secondary-color;
+      }
+      .user-profile___display--author__screen--name {
+        color: $secondary-color;
+        opacity: 0.5;
+      }
+    }
+    .user-profile__counts {
+      list-style-type: none;
+      display: flex;
+      span {
+        font-size: 0.7rem;
+        color: $light-secondary-color;
+      }
+      b {
+        color: $secondary-color;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .tweets__section {
+    flex: 4;
+    .tweets__unorderd-list {
+      margin: 0 0 0 2rem;
+    }
+  }
+}
+
+.section__add-tweet {
+  background: $app-background;
+  padding: 1rem;
+  border-radius: .5rem;
+  .form__add-tweet {
+    display: flex;
+    flex-flow: row wrap;
+    .textarea--add-tweet {
+      padding: .2rem;
+      margin: 1rem;
+      width: 25rem;
+      height: 10rem;
+    }
+    .btn--add-tweet {
+      align-self: center;
+    }
+
+    .btn--add-tweet[data-disabled="false"]:hover {
+      color: $primary-color;
+      background-color: transparent;
+      text-decoration: none;
+    }
+  
+    .btn--add-tweet[data-disabled="true"] {
+      opacity: 0.3 !important;
+    }
+    
+    .btn--add-tweet:focus {
+      @include focus();
+    }
+  }
+}
+
+.user__not--athorized {
+  background: $app-background;
+  padding: 1rem;
+  border-radius: .5rem;
+}
+
+/*
+* Media Queries
+*/
+
+@media screen and (max-width: $media-brk-pt) {
+  .user {
+    flex-direction: column;
+  }
+  .tweets__section {
+    width: 100%;
+    .tweets__unorderd-list {
+      margin: 1rem;
+    }
+  }
+  .section__add-tweet {
+    .form__add-tweet {
+      flex-flow: column wrap;
+      .textarea--add-tweet {
+        padding: .1rem;
+        margin: .5rem;
+        width: 15rem;
+        height: 12rem;
+      }
+    }
+  }
+}

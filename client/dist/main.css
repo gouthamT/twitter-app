@@ -1,0 +1,339 @@
+input {
+  border: 1px solid #706d6e;
+  border-radius: 2px;
+  display: block;
+  min-height: 2.5rem;
+  padding: 0.4375rem 0.625rem;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.75rem;
+  text-align: left;
+  margin-bottom: 0;
+  text-overflow: ellipsis; }
+
+.btn {
+  border: #1da1f2;
+  color: #ffffff;
+  background-color: #1da1f2;
+  border-radius: 1.5rem;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 7.5rem;
+  padding: 0.4375rem 1.5rem;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0;
+  text-align: left;
+  text-align: center;
+  outline: 0; }
+
+.app::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5; }
+
+.app::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5; }
+
+.app::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #1da1f2; }
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; }
+
+.app .app__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+  height: 46px;
+  line-height: 1;
+  padding: 0 .2rem 0 .2rem;
+  background: #ffffff; }
+  .app .app__nav .app__nav--item {
+    padding: 0.7rem;
+    text-decoration: none;
+    color: #1da1f2 !important; }
+  .app .app__nav .app__nav--item--active {
+    border-bottom: 2px solid #1da1f2;
+    text-decoration: none; }
+
+.form__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem; }
+  .form__search .search-box__input {
+    width: 20rem; }
+  .form__search .search-box__input:focus {
+    outline: 0;
+    box-shadow: 0px 0px 3px 3px rgba(17, 117, 181, 0.6); }
+  .form__search .search-box__btn-search:focus {
+    outline: 0;
+    box-shadow: 0px 0px 3px 3px rgba(17, 117, 181, 0.6); }
+  .form__search .search-box__btn-search[data-disabled="false"]:hover {
+    color: #1da1f2;
+    background-color: transparent;
+    text-decoration: none; }
+  .form__search .search-box__btn-search {
+    margin-left: 0.2rem; }
+  .form__search .search-box__btn-search[data-disabled="true"] {
+    opacity: 0.3 !important; }
+
+.tweets__section {
+  margin-top: 1rem; }
+  .tweets__section .search__not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    margin-left: 7rem;
+    width: 80%;
+    padding: .5rem; }
+  .tweets__section .tweets__unorderd-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    margin-left: 7rem;
+    background-color: #ffffff;
+    width: 80%;
+    padding: 0; }
+    .tweets__section .tweets__unorderd-list .tweet__list-item {
+      list-style-type: none;
+      align-self: flex-start;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
+      margin-bottom: 2rem;
+      box-sizing: border-box;
+      width: 100%; }
+      .tweets__section .tweets__unorderd-list .tweet__list-item .tweet-message {
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: flex-start;
+        padding: .5rem;
+        position: relative; }
+        .tweets__section .tweets__unorderd-list .tweet__list-item .tweet-message .tweet-message__head {
+          overflow: hidden; }
+          .tweets__section .tweets__unorderd-list .tweet__list-item .tweet-message .tweet-message__head .tweet-message_user--background {
+            width: 100%;
+            height: 7rem; }
+          .tweets__section .tweets__unorderd-list .tweet__list-item .tweet-message .tweet-message__head .tweet-message_user--avatar[data-bg="true"] {
+            transform: translate(10%, -50%); }
+          .tweets__section .tweets__unorderd-list .tweet__list-item .tweet-message .tweet-message__head .tweet-message_user--avatar[data-bg="false"] {
+            transform: translate(10%); }
+        .tweets__section .tweets__unorderd-list .tweet__list-item .tweet-message .tweet-message__display .tweet-message__display--author {
+          color: #14171a; }
+        .tweets__section .tweets__unorderd-list .tweet__list-item .tweet-message .tweet-message__display .tweet-message__display--timeStamp {
+          font-size: 0.7rem;
+          color: #657786; }
+        .tweets__section .tweets__unorderd-list .tweet__list-item .tweet-message .tweet-message__display-label {
+          color: #14171a;
+          font-weight: normal;
+          word-wrap: break-word;
+          overflow: hidden;
+          font-size: 1rem;
+          line-height: 1.375em;
+          margin-top: .1rem; }
+        .tweets__section .tweets__unorderd-list .tweet__list-item .tweet-message .tweet-favorite {
+          margin: .1rem;
+          align-self: flex-end;
+          position: absolute;
+          right: 2rem;
+          bottom: .5rem;
+          width: 2rem;
+          height: 2rem; }
+          .tweets__section .tweets__unorderd-list .tweet__list-item .tweet-message .tweet-favorite svg {
+            cursor: pointer; }
+            .tweets__section .tweets__unorderd-list .tweet__list-item .tweet-message .tweet-favorite svg:hover {
+              fill: #1da1f2; }
+
+/*
+* Media Queries
+*/
+@media screen and (max-width: 600px) {
+  .tweets__section .search__not-found {
+    margin-left: 2rem; } }
+
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  .user .user-profile__section {
+    position: relative;
+    margin-left: 2.5rem;
+    flex: 1; }
+    .user .user-profile__section .user-profile___header {
+      overflow: hidden;
+      padding: 0; }
+      .user .user-profile__section .user-profile___header .user-profile__user--background {
+        width: 100%;
+        height: 7rem; }
+      .user .user-profile__section .user-profile___header .user-profile__user--avatar[data-bg="true"] {
+        transform: translate(10%, -50%); }
+      .user .user-profile__section .user-profile___header .user-profile__user--avatar[data-bg="false"] {
+        transform: translate(10%); }
+    .user .user-profile__section .user-profile___display {
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      transform: translate(15%, 15%); }
+      .user .user-profile__section .user-profile___display .user-profile___display--author {
+        color: #14171a; }
+      .user .user-profile__section .user-profile___display .user-profile___display--author__screen--name {
+        color: #14171a;
+        opacity: 0.5; }
+    .user .user-profile__section .user-profile__counts {
+      list-style-type: none;
+      display: flex; }
+      .user .user-profile__section .user-profile__counts span {
+        font-size: 0.7rem;
+        color: #657786; }
+      .user .user-profile__section .user-profile__counts b {
+        color: #14171a;
+        margin-right: 0.5rem; }
+  .user .tweets__section {
+    flex: 4; }
+    .user .tweets__section .tweets__unorderd-list {
+      margin: 0 0 0 2rem; }
+
+.section__add-tweet {
+  background: #ecf0f1;
+  padding: 1rem;
+  border-radius: .5rem; }
+  .section__add-tweet .form__add-tweet {
+    display: flex;
+    flex-flow: row wrap; }
+    .section__add-tweet .form__add-tweet .textarea--add-tweet {
+      padding: .2rem;
+      margin: 1rem;
+      width: 25rem;
+      height: 10rem; }
+    .section__add-tweet .form__add-tweet .btn--add-tweet {
+      align-self: center; }
+    .section__add-tweet .form__add-tweet .btn--add-tweet[data-disabled="false"]:hover {
+      color: #1da1f2;
+      background-color: transparent;
+      text-decoration: none; }
+    .section__add-tweet .form__add-tweet .btn--add-tweet[data-disabled="true"] {
+      opacity: 0.3 !important; }
+    .section__add-tweet .form__add-tweet .btn--add-tweet:focus {
+      outline: 0;
+      box-shadow: 0px 0px 3px 3px rgba(17, 117, 181, 0.6); }
+
+.user__not--athorized {
+  background: #ecf0f1;
+  padding: 1rem;
+  border-radius: .5rem; }
+
+/*
+* Media Queries
+*/
+@media screen and (max-width: 600px) {
+  .user {
+    flex-direction: column; }
+  .tweets__section {
+    width: 100%; }
+    .tweets__section .tweets__unorderd-list {
+      margin: 1rem; }
+  .section__add-tweet .form__add-tweet {
+    flex-flow: column wrap; }
+    .section__add-tweet .form__add-tweet .textarea--add-tweet {
+      padding: .1rem;
+      margin: .5rem;
+      width: 15rem;
+      height: 12rem; } }
+
+.modal__container {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000; }
+  .modal__container .btn__close-modal {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: 0.7rem;
+    min-width: 0 !important;
+    font-size: 2rem;
+    line-height: 1rem;
+    margin: 0 !important;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 50%; }
+    .modal__container .btn__close-modal:hover {
+      background: rgba(17, 117, 181, 0.6); }
+
+/*
+* Media Queries
+*/
+@media screen and (max-width: 600px) {
+  .modal__container .tweets__unorderd-list {
+    margin: 1rem; } }
+
+.app {
+  background: #ecf0f1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.spin__center {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000; }
+
+.app__not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+

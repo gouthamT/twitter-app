@@ -1,0 +1,27 @@
+@import "./variables";
+@import "./mixin.scss";
+@import "./global.scss";
+@import "./nav.scss";
+@import "./search.scss";
+@import "./user.scss";
+@import "./modal.scss";
+
+.app {
+  background: $app-background;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  @include app-main-layout();
+}
+
+.spin__center {
+  background-color: $modal-bg-color;
+  padding-top: 5rem;
+  @include flex-center();
+  @include app-main-layout();
+  z-index: 10000;
+}
+
+.app__not-found {  
+  @include flex-center();
+  flex-direction: column;
+}
